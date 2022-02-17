@@ -3,10 +3,10 @@
 Using Recommendation System Techniques to Make Better Recommendations
 
 # Background and Problem Statement
-This relatively short weekly project was part of the recommendation systems module in the MIT Applied Data Science Program (MIT ADSP).  Data for over 7.8 million Amazon product reviews was provided and included the user ID, Product ID, and rating information.  The task was to create a model which would recommend products to users using different recmmendation techniques.
+This relatively short weekly project was part of the recommendation systems module in the MIT Applied Data Science Program (MIT ADSP).  Data for over 7.8 million Amazon product reviews was provided and included the user ID, Product ID, and rating information from 1 to 5.  The task was to create a model which would recommend products to users using different recmmendation techniques.
 
-
-
+# Initial Steps and Exploratory Data Analysis
+After some initial examination of the data revealed that there were no missing values or null data in the provied data, a bar chart was plotted to determine the quanitity of each rating.  The number of unique users and umber of unique products were then extracted from the dataset, indicating that there were 4,201,696 users rating 476,002 unique products.  To simplify this task, a new dataset was derived with only products ratings only from users who have submitted 50 or more ratings.  This limit will ensure that each user has at least some information indicating the different products they have interacted with so that the recommendation systems can make more educated recommendations.  This reduced the size of the dataset drastically,  with 1,540 unique users rating 48,190 unique products for a total of 125,871 ratings.  
 
 
 
