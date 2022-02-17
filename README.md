@@ -13,6 +13,13 @@ After some initial examination of the data revealed that there were no missing v
 ## Rank-Based Recommendation
 
 
+## Collaborative Filtering
+
+
+## Collaborative Filtering Using Singular Value Decompoisition (SVD)
+
+
+
 
 
 # Note Regarding MIT ADSP Weekly Projects:
