@@ -18,6 +18,13 @@ After some initial examination of the data revealed that there were no missing v
 
 ## Collaborative Filtering Using Singular Value Decompoisition (SVD)
 
+# Conclusions
+
+# Personal Commentary - Additional Coding, Uncovering Peculiarities
+
+## Bottom Line Upfront (BLUF):
+- It can be shown that the SVD model is not producing useful results upon furhter inspection of the recommendations being made
+- The SVD model needs to be re-done
 
 
 
