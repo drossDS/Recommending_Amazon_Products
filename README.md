@@ -14,7 +14,7 @@ After some initial examination of the data revealed that there were no missing v
 This model is effectively a "Top Products" recommendtion algorithm  The average rating for all products was computed in order to establish a product ranking, and a function was defined to recommend the top user-specified number of products with a user-specified minimum number of product ratings.
 
 ## Collaborative Filtering
-A function was defined which makes product recommendations based on the top-rated porducts of users with similar product tastes.  A cosine similarity function was employed to create a numberical comparison between an input user ID and all other user IDs to produce a ranked list of similar users.
+A function was defined which makes a specified number of product recommendations based on the top-rated porducts of users with similar product tastes.  A cosine similarity function was employed to calculate a "similarity score" which would act as a numberical comparison between an input user ID and all other user IDs to produce a ranked list of similar users.  The products rated by the most similar users - which were not already rated by the input user - are then aggregated until the desried number of product recommendations is reached.
 
 
 ## Collaborative Filtering Using Singular Value Decompoisition (SVD)
