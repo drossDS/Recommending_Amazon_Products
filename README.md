@@ -40,9 +40,11 @@ A variety of products were recommended for a few specified users using the three
 
 This weekly project assignment was unlike the others in that there was very little emphasis on measuring the acccuracy of either the collaborative filtering or SVD models.  The only attempt that was made in the prvided code which attmepted to calculate the RMSE error between the predicted and observed average product ratings, and it yielded a completely arbitrary result given that it was compared to nothing else.  The real idication that somehting was wrong, was the printing of the first few perdicted product ratings and versus their observed prpoduct ratiings, and some of them seemed off.
 
-( **Insert a pic of the table here** )
+![](Images_RecSys/Average_ratings_table.png)
 
 Digging furhter, I decided to examine one user to determine if the predictions for products which that individual rated matched their actual (observed) ratings.  They were not....not even close.  So then the next strategy was to see if this was a fluke for that one user or if this whole model missed the mark entirely, and to do that, one must determine the purpose of the SVD model which was to synthesize a rating of every product by every user.  A simple way to test this is to determine f there are more ratings 1 through 5 in the predicted dataset than in the observed dataset.  There were not....there were actually less....
+
+![](Images_RecSys/Predicted_vs_observed_rating_counts.png)
 
 ## Note Regarding MIT ADSP Weekly Projects:
 Due ot the relatively brief nature of program at only 12 weeks in duration, the code for this project was provided to the students in a near-finished state.  It was responsibility of the student ot then go through and fill in the sections of code relevant to the specific methods covered during the week's lesson.  As this course was designed for individuals from all professional backgrounds working full-time jobs, there was an emphasis on developing the student's intuition for how to use data science tools, and less on the details behind coding an entier project from scratch.
