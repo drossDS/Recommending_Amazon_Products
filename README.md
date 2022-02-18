@@ -17,16 +17,16 @@ This model is effectively a "Top Products" recommendtion algorithm where the ave
 A function was defined which makes a specified number of product recommendations based on the top-rated porducts of users with similar product tastes.  A cosine similarity function was employed to calculate a "similarity score" which would act as a numberical comparison between an input user ID and all other user IDs to produce a ranked list of similar users.  The products rated by the most similar users - which were not already rated by the input user - are then aggregated until the desried number of product recommendations is reached.
 
 ### Collaborative Filtering Using Singular Value Decompoisition (SVD)
-<u> ***Description:*** </u> Singular value decomposition is a method employed in recommendation systems to use existing user and product rating data to uncover "latent features" in the data which can be leveraged to predict product ratings from all users.  This includes the prediction of user ratings for products with which the users have not yet interacted.  
+***Description:*** <br>Singular value decomposition is a method employed in recommendation systems to use existing user and product rating data to uncover "latent features" in the data which can be leveraged to predict product ratings from all users.  This includes the prediction of user ratings for products with which the users have not yet interacted.  
 
-***Method:*** To do this, the final ratings matrix was passed through a Sparse Singular Value Decomposition (Scipy Sparse Linear Algebra "svds") with 50 latent features specified.  This produced U, Sigma, and V-transpose matrices which were then multiplied to create a predicted ratings matrix for all products from all users.  A function was defined which was capable of producing a specified number of ratings for a given user ID based on the predicted ratings matrix.  The top rated products by the given user from the predicted ratings matrix which had not already been rated by the user are then recommended by the function.
+***Method:***<br>To do this, the final ratings matrix was passed through a Sparse Singular Value Decomposition (Scipy Sparse Linear Algebra "svds") with 50 latent features specified.  This produced U, Sigma, and V-transpose matrices which were then multiplied to create a predicted ratings matrix for all products from all users.  A function was defined which was capable of producing a specified number of ratings for a given user ID based on the predicted ratings matrix.  The top rated products by the given user from the predicted ratings matrix which had not already been rated by the user are then recommended by the function.
 
-***Evaluation:*** As a rudimentary means of evaluating the model, the predicted average product ratings were compared to the observed average product ratings for all products, and the root mean squared error (RMSE) was calulated to quantify the error between the predicted and observed ratings.
+***Evaluation:***<br>As a rudimentary means of evaluating the model, the predicted average product ratings were compared to the observed average product ratings for all products, and the root mean squared error (RMSE) was calulated to quantify the error between the predicted and observed ratings.
 
 ## Conclusions
 A variety of products were recommended for a few specified users using the three defined recommendation algorithms.  The root mean sqaured error for the SDV algorithm was calculated, though on it's own, this error provides little information on the overall accuracy of the model.
 
-# Student Postmortem and Additional Investigations
+# Additional Student Investigations Post-Submission
 
 ## Bottom Line Upfront (BLUF):
 - It can be shown that the SVD model is not producing useful results upon furhter inspection of the recommendations being made
