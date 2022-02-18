@@ -11,9 +11,10 @@ After some initial examination of the data revealed that there were no missing v
 # Recommendation System Models
 
 ## Rank-Based Recommendation
-
+This model is effectively a "Top Products" recommendtion algorithm  The average rating for all products was computed in order to establish a product ranking, and a function was defined to recommend the top user-specified number of products with a user-specified minimum number of product ratings.
 
 ## Collaborative Filtering
+A function was defined which makes product recommendations based on the top-rated porducts of users with similar product tastes.  A cosine similarity function was employed to create a numberical comparison between an input user ID and all other user IDs to produce a ranked list of similar users.
 
 
 ## Collaborative Filtering Using Singular Value Decompoisition (SVD)
