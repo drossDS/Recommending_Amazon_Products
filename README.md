@@ -3,14 +3,12 @@
 Using Recommendation System Techniques to Make Better Recommendations
 
 ## Background and Problem Statement
-This relatively short weekly project was part of the recommendation systems module in the MIT Applied Data Science Program (MIT ADSP).  Data for over 7.8 million Amazon product reviews was provided and included the user ID, Product ID, and rating information from 1 to 5.  The task was to create a model which would recommend products to users using different recommendation techniques.
+This relatively short weekly project was part of the recommendation systems module in the MIT Applied Data Science Program (MIT ADSP).  Data for over 7.8 million Amazon product ratings were provided and included the corresponding user ID and Product ID.  The task was to create a model which would recommend products to users using different recommendation techniques.
 
 ## Initial Processing and Exploratory Data Analysis
-After some initial examination of the data revealed that there were no missing values or null data in the provided data, a bar chart was plotted to determine the quantity of each rating.  The number of unique users and umber of unique products were then extracted from the dataset, indicating that there were 4,201,696 users rating 476,002 unique products.
+After initial examination of the data revealed that there were no missing or null values in the provided data, a bar chart was plotted to determine the quantity of each rating.  The number of unique users and the number of unique products were then extracted from the dataset, indicating that there were 4,201,696 unique users rating 476,002 unique products.
 
-
-
-***Dataset Preparation:*** <br>A new dataset was derived with only products ratings only from users who have submitted 50 or more ratings.  This limit will ensure that each user has at least some information indicating the different products they have interacted with so that the recommendation systems can make more educated recommendations.  This reduced the size of the dataset drastically, with 1,540 unique users rating 48,190 unique products for a total of 125,871 ratings.  
+***Dataset Preparation:*** <br>A new dataset was created with only product ratings from users who have submitted 50 or more ratings.  This limit will ensure that each user has at least some information indicating the different products they have interacted with so that the recommendation systems can make more educated recommendations.  This reduced the size of the dataset drastically, with 1,540 unique users rating 48,190 unique products for a total of 125,871 ratings.  
 
 ***Data Formatting:***<br>A "final ratings matrix" of all 74,212,600 possible user/product combinations was created with the users comprising the rows and the products comprising the columns.  The provided ratings were populated to their respective locations and the matrix density was calculated to be 0.17%, indicating that the matrix was very sparse.  For the vast majority of user/product combinations where a user had not rated a product, a value of 0 was imputed.
 
