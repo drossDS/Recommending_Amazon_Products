@@ -50,7 +50,8 @@ Another invesigation examined differences between the observed and predicted rat
 
 Taking a higher level view, the purpose of the SVD model is to fill in missing information by predicting user ratings for prodcuts not yet rated.  Therefore the model should be accomplishing two goals:
 1. Approximating the actual (observed) user ratings for all rated products
-2. Creating rating for unrated products (in this model, replacing 0s with numbers that can be rounded to integers 1 through 5)
+2. Creating ratings for unrated products - in this model, replacing 0s with numbers that can be rounded to integers ratings
+
 To test this, the counts of each rating category for both the observed and predicted ratings matrices were plotted to verify the model was meeting the above two expectations.
 
 ![](Images_RecSys/Predicted_vs_observed_rating_counts.png)
