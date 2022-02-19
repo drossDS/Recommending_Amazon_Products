@@ -13,7 +13,7 @@ After initial examination of the data revealed that there were no missing or nul
 ***Data Formatting:***<br>A "final ratings matrix" of all 74,212,600 possible user/product combinations was created and the provided ratings were populated to their respective locations.  The matrix density was calculated to be 0.17%, indicating that the matrix was very sparse.  The vast majority of user and product combinations were unrated, and in such instances, a value of 0 was imputed into the matrix in place of a numerical rating.
 
 ## Recommendation System Models
-Three different recommnedation models were explored.
+Three different recommendation models were explored.
 
 ### Rank-Based Recommendation
 This model was effectively a "Top Products" recommendation algorithm where the average rating for all products was computed in order to establish a product ranking.  A function was defined to recommend a specified number of top-ranking products with at least a specified number of product ratings.
