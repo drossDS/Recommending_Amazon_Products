@@ -56,7 +56,7 @@ To test this, the counts of each rating category for both the observed and predi
 
 ![](Images_RecSys/Predicted_vs_observed_rating_counts.png)
 
-From the count plots shown, it can be seen that there is actually a greater number of unrated products (0 rating) in the predicted ratings matrix than in the observed ratings matrix.  Further, the rated products in the predicted matrix show a bias towards lower ratings while the observed ratings tended to be much higher, and often 5.  From this, the model is somehow removing legitimate ratings entirely, and mis-rating the remaining products.  From this, it can be concluded tha the model is not accomplishing it's goals and must be reworked.
+From the count plots shown, it can be seen that there is no noticeable reduction in th enumber of unrated products (0 rating) in the predicted ratings matrix as compared to the observed ratings matrix.  Analysis indicates that the number of unrated products in the predicted ratings matrix (74,140,280) are actually greater than those in the observed ratings matrix (74,086,729).  Further, the rated products in the predicted matrix show a bias towards lower ratings while the observed ratings tended to be much higher, and often 5.  From this, the model is somehow removing legitimate ratings entirely, and mis-rating the remaining products.  From this, it can be concluded tha the model is not accomplishing it's goals and must be reworked.
 
 ## Next Steps:
 Given current time constraints, this project will be re-published in the future after more research into a better implementation of SVD recommendation system methods is performed.  Additionally, a more robust accuracy testing protocol will need to be implemented with cross validation methods on training and test datasets.
