@@ -44,7 +44,9 @@ This MIT ADSP weekly project assignment was unlike the others in that there was 
 
 While it's difficult to judge the integirty of the analysis based on only a few average product ratings, it can be seen that the numbers are still very close to 0 (where a 0 rating indicates the product was not rated) which would suggest that the SVD method is not predicting as many product ratings for previously un-rated products as it should.
 
-Another invesigation examined differences between the observed and predicted ratings for a particular user ID.  This would help determine if the model was able to replicate a user's actual product ratings.
+Another invesigation examined differences between the observed and predicted ratings for a particular user ID.  This would help determine if the model was able to replicate a user's actual product ratings.  Five top-rated products based on observed ratings for an arbitrary user (user ID 100) are shown in the table below versus their predictions.
+
+![](Images_RecSys/Avg_pred_v_obs_userid100.png)
 
 Digging furhter, I decided to examine one user to determine if the predictions for products which that individual rated matched their actual (observed) ratings.  They were not....not even close.  So then the next strategy was to see if this was a fluke for that one user or if this whole model missed the mark entirely, and to do that, one must determine the purpose of the SVD model which was to synthesize a rating of every product by every user.  A simple way to test this is to determine f there are more ratings 1 through 5 in the predicted dataset than in the observed dataset.  There were not....there were actually less....
 
