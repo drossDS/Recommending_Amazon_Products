@@ -44,13 +44,23 @@ This MIT ADSP weekly project assignment was unlike the others in that there was 
 
 While it's difficult to judge the integirty of the analysis based on only a few average product ratings, it can be seen that the numbers are still very close to 0 (where a 0 rating indicates the product was not rated) which would suggest that the SVD method is not predicting as many product ratings for previously un-rated products as it should.
 
-Another invesigation examined differences between the observed and predicted ratings for a particular user ID.  This would help determine if the model was able to replicate a user's actual product ratings.  Five top-rated products based on observed ratings for an arbitrary user (user ID 100) are shown in the table below versus their predictions.
+Another invesigation examined differences between the observed and predicted ratings for a particular user ID.  This would help determine if the model was able to replicate a user's actual product ratings.  Five top-rated products based on observed ratings for an arbitrary user (user ID 100) are shown in the table below versus their predictions.  For the products show, it can be seen that the model is not producing accurate results.
 
 ![](Images_RecSys/Avg_pred_v_obs_userid100.png)
 
-Digging furhter, I decided to examine one user to determine if the predictions for products which that individual rated matched their actual (observed) ratings.  They were not....not even close.  So then the next strategy was to see if this was a fluke for that one user or if this whole model missed the mark entirely, and to do that, one must determine the purpose of the SVD model which was to synthesize a rating of every product by every user.  A simple way to test this is to determine f there are more ratings 1 through 5 in the predicted dataset than in the observed dataset.  There were not....there were actually less....
+Taking a higher level view, the purpose of the SVD model is to fill in missing information by predicting user ratings for prodcuts not yet rated.  Therefore the model should be accomplishing two goals:
+1. Approximating the actual (observed) user ratings for all rated products
+2. Creating rating for unrated products (in this model, replacing 0s with numbers that can be rounded to integers 1 through 5)
+To test this, the counts of each rating category for both the observed and predicted ratings matrices were plotted to verify the model was meeting the above two expectations.
 
 ![](Images_RecSys/Predicted_vs_observed_rating_counts.png)
 
+From the count plots shown, it can be seen that there is actually a greater number of unrated products (0 rating) in the predicted ratings matrix than in the observed ratings matrix.  Further, the rated products in the predicted matrix show a bias towards lower ratings while the observed ratings tended to be much higher, and often 5.  From this, the model is somehow removing legitimate ratings entirely, and mis-rating the remaining products.  From this, it can be concluded tha the model is not accomplishing it's goals and must be reworked.
+
+## Next Steps:
+Given current time constraints, this project will be re-published in the future after more research into a better implementation of SVD recommendation system methods is performed.  Additionally, a more robust accuracy testing protocol will need to be implemented with cross validation methods on training and test datasets.
+
 ## Note Regarding MIT ADSP Weekly Projects:
+**In brief:  The code for this project was provided by the program, and the students were required to fill in the key lines of code**
+
 Due ot the relatively brief nature of program at only 12 weeks in duration, the code for this project was provided to the students in a near-finished state.  It was responsibility of the student ot then go through and fill in the sections of code relevant to the specific methods covered during the week's lesson.  As this course was designed for individuals from all professional backgrounds working full-time jobs, there was an emphasis on developing the student's intuition for how to use data science tools, and less on the details behind coding an entier project from scratch.
