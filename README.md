@@ -37,13 +37,13 @@ A variety of products were recommended for a few specified users using the three
 - Upon further inspection of the recommendations made by the SVD model, it can be shown that it's not producing useful results 
 - The SVD model likely needs to be re-done after some brief manipulation of the number of latent features and research into other possible hyper-parameters to be tuned
 
-This MIT ADSP weekly project assignment was unlike the others in that there was very little emphasis on measuring the accuracy of either the collaborative filtering or SVD models.  The only attempt that was made in the provided code was the RMSE calculation between the predicted and observed average product ratings.  This yielded an arbitrary result given that no other similar comparison was made.  The only other information included in the code that could give insight into the model accuracy was the comparison of the predicted and observed product ratings for the first few prod IDs.  They are provided in the image below.
+This MIT ADSP weekly project assignment was unlike the others in that there was very little emphasis on measuring the accuracy of either the collaborative filtering or SVD models.  The only attempt that was made in the provided code was the RMSE calculation between the predicted and observed average product ratings.  This yielded an arbitrary result given that this was the only model of its nature for which an RMSE value was determined.  The only other information included in the code that could give insight into the model accuracy was the comparison of the predicted and observed product ratings for the first few prod IDs.  They are provided in the image below.
 
 ![](Images_RecSys/Average_ratings_table.png)
 
 While it's difficult to judge the integrity of the analysis based on only a few average product ratings, it can be seen that the numbers are still very close to 0 (where a 0 rating indicates the product was not rated) which would suggest that the SVD method is not predicting as many product ratings for previously un-rated products as it should.
 
-Another investigation examined differences between the observed and predicted ratings for a particular user ID.  This would help determine if the model was able to replicate a user's actual product ratings.  Five top-rated products based on observed ratings for an arbitrary user (user ID 100) are shown in the table below versus their predictions.  For the products show, it can be seen that the model is not producing accurate results.
+Another investigation examined differences between the observed and predicted ratings for a particular user ID.  This was helpful to determine if the model was able to replicate a user's actual product ratings.  Five of an arbitrary user's (user ID 100's) top-rated products from the observed ratings data are shown in the table below versus their predictions.  For the products shown, it can be seen that the model is not producing accurate results.
 
 ![](Images_RecSys/Avg_pred_v_obs_userid100.png)
 
