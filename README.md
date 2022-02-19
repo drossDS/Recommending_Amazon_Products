@@ -35,12 +35,16 @@ A variety of products were recommended for a few specified users using the three
 # Additional Student Investigations Post-Submission
 
 ## Bottom Line Upfront (BLUF):
-- It can be shown that the SVD model is not producing useful results upon furhter inspection of the recommendations being made
-- The SVD model needs to be re-done
+- Upon furhter inspection of the recommendations made by the SVD model, it can be shown that it's not producing useful results 
+- The SVD model likely needs to be re-done after some brief manipulation of the number of latent features and research into other possible hyper-parameters to be tuned
 
-This weekly project assignment was unlike the others in that there was very little emphasis on measuring the acccuracy of either the collaborative filtering or SVD models.  The only attempt that was made in the prvided code which attmepted to calculate the RMSE error between the predicted and observed average product ratings, and it yielded a completely arbitrary result given that it was compared to nothing else.  The real idication that somehting was wrong, was the printing of the first few perdicted product ratings and versus their observed prpoduct ratiings, and some of them seemed off.
+This MIT ADSP weekly project assignment was unlike the others in that there was very little emphasis on measuring the acccuracy of either the collaborative filtering or SVD models.  The only attempt that was made in the provided code was the RMSE calculation between the predicted and observed average product ratings.  This yielded an arbitrary result given that no other similar comparison was made.  The only other information included in the code that could give insight into the model accuracy was the comparison of the perdicted and observed prpoduct ratiings for the first few prod IDs.  They are provided in the image below.
 
 ![](Images_RecSys/Average_ratings_table.png)
+
+While it's difficult to judge the integirty of the analysis based on only a few average product ratings, it can be seen that the numbers are still very close to 0 (where a 0 rating indicates the product was not rated) which would suggest that the SVD method is not predicting as many product ratings for previously un-rated products as it should.
+
+Another invesigation examined differences between the observed and predicted ratings for a particular user ID.  This would help determine if the model was able to replicate a user's actual product ratings.
 
 Digging furhter, I decided to examine one user to determine if the predictions for products which that individual rated matched their actual (observed) ratings.  They were not....not even close.  So then the next strategy was to see if this was a fluke for that one user or if this whole model missed the mark entirely, and to do that, one must determine the purpose of the SVD model which was to synthesize a rating of every product by every user.  A simple way to test this is to determine f there are more ratings 1 through 5 in the predicted dataset than in the observed dataset.  There were not....there were actually less....
 
