@@ -49,7 +49,7 @@ Another investigation examined differences between the observed and predicted ra
 
 Taking a higher-level view, the purpose of the SVD model is to fill in missing information by predicting user ratings for products not yet rated.  Therefore, the model should be accomplishing two goals:
 1. Approximating the actual (observed) user ratings for all rated products
-2. Creating ratings for unrated products - in this model, replacing 0s with numbers that can be rounded to integers ratings
+2. Synthesizing ratings for unrated products - in this model, replacing 0s with numbers that can be rounded to integers ratings
 
 To test this, the counts of each rating category for both the observed and predicted ratings matrices were plotted to verify the model was meeting the above two expectations.
 
@@ -58,9 +58,7 @@ To test this, the counts of each rating category for both the observed and predi
 From the count plots shown, it can be seen that there is no noticeable reduction in the number of unrated products (0 rating) in the predicted ratings matrix as compared to the observed ratings matrix.  Analysis indicates that the number of unrated products in the predicted ratings matrix (74,140,280) are actually greater than those in the observed ratings matrix (74,086,729).  Further, the rated products in the predicted matrix show a bias towards lower ratings while the observed ratings tended to be much higher, and often 5.  From this, the model is somehow removing legitimate ratings entirely, and mis-rating the remaining products.  From this, it can be concluded that the model is not accomplishing its goals and must be reworked.
 
 ## Next Steps:
-Given current time constraints, this project will be re-published in the future after more research into a better implementation of SVD recommendation system methods is performed.  Additionally, a more robust accuracy testing protocol will need to be implemented with cross validation methods on training and test datasets.
+Given current time constraints, this project will be re-published in the future after more research into a better implementation of SVD recommendation system methods is performed.  Additionally, a more robust accuracy testing protocol will need to be implemented with cross-validation methods on training and test datasets.
 
 ## Note Regarding MIT ADSP Weekly Projects:
-**In brief:  The code for this project was provided by the program, and the students were required to fill in the key lines of code**
-
-Due to the relatively brief nature of program at only 12 weeks in duration, the code for this project was provided to the students in a near-finished state.  It was responsibility of the student to then go through and fill in the sections of code relevant to the specific methods covered during the week's lesson.  As this course was designed for individuals from all professional backgrounds working full-time jobs, there was an emphasis on developing the student's intuition for how to use data science tools, and less on the details behind coding an entire project from scratch.
+**The code for this project was provided by the program, and the students were required to fill in the key lines of code and answer the provided prompts**
