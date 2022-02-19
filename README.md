@@ -8,6 +8,8 @@ This relatively short weekly project was part of the recommendation systems modu
 ## Initial Processing and Exploratory Data Analysis
 After initial examination of the data revealed that there were no missing or null values in the provided data, a bar chart was plotted to determine the quantity of each rating.  The number of unique users and the number of unique products were then extracted from the dataset, indicating that there were 4,201,696 unique users rating 476,002 unique products.
 
+![](Images_RecSys/Ratings_by_percentage_white.png)
+
 ***Dataset Preparation:*** <br>A new dataset was created with only product ratings from users who have submitted 50 or more ratings.  This limit ensured that each user had at least a small portfolio of information indicating the different products they had interacted with so that the recommendation systems could make more informed recommendations.  This reduced the size of the dataset drastically, with 1,540 unique users rating 48,190 unique products for a total of 125,871 ratings.  
 
 ***Data Formatting:***<br>A "final ratings matrix" of all 74,212,600 possible user/product combinations was created and the provided ratings were populated to their respective locations.  The matrix density was calculated to be 0.17%, indicating that the matrix was very sparse.  The vast majority of user and product combinations were unrated, and in such instances, a value of 0 was imputed into the matrix in place of a numerical rating.
